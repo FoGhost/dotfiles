@@ -15,7 +15,7 @@ NeoBundle "kchmck/vim-coffee-script.git"
 NeoBundle 'briancollins/vim-jst'
 
 " Snippets
-NeoBundle "http://github.com/gmarik/snipmate.vim.git"
+" NeoBundle "http://github.com/gmarik/snipmate.vim.git"
 
 " Instant-Markdown
 " NeoBundle "http://github.com/suan/vim-instant-markdown.git"
@@ -58,10 +58,35 @@ NeoBundle "fuenor/qfixgrep"
 NeoBundleCheck " Check plugins installation
 
 " Load plugin vimrc files
-let s:bundles = neobundle#config#get_neobundles()
-for bundle in s:bundles
-  if filereadable(expand('~/.vim/config/plugin/' . bundle.name . '.vimrc'))
-    exe 'source' ('~/.vim/config/plugin/' . bundle.name . '.vimrc')
+" let s:bundles = neobundle#config#get_neobundles() 
+" <- NG can not control the loading order;
+
+let s:bundle_names = [
+  \ "vim-colors-solarized",
+  \ "surround.vim",
+  \ "repeat.vim",
+  \ "Align",
+  \ "vim-coffee-script",
+  \ "vim-jst",
+  \ "vim-haml",
+  \ 'jQuery',
+  \ "vim-rails",
+  \ "fugitive.vim",
+  \ "vim-quickrun",
+  \ "qfixhowm",
+  \ "qfixgrep",
+  \ 'snipmate.vim',
+  \ 'unite.vim',
+  \ 'vimproc',
+  \ "command-t",
+  \ "vimfiler",
+  \ "vimshell",
+  \ "neocomplcache",
+  \ "neosnippet"
+  \ ]
+for bundle_name in s:bundle_names
+  if filereadable(expand('~/.vim/config/plugin/' . bundle_name . '.vimrc'))
+    exe 'source' ('~/.vim/config/plugin/' . bundle_name . '.vimrc')
   endif
 endfor
 
