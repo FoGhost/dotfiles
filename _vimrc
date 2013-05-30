@@ -43,6 +43,7 @@ NeoBundle "git://git.wincent.com/command-t.git"
 NeoBundle "Shougo/vimfiler"
 
 NeoBundle "Shougo/neocomplcache"
+NeoBundle "Shougo/neosnippet"
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/vimshell"
 NeoBundle "Shougo/vimproc"
@@ -50,7 +51,7 @@ NeoBundle "Shougo/vimproc"
 " Run script quickly : Quickrun
 NeoBundle "thinca/vim-quickrun"
 
-" NeoBundle "fuenor/qfixhowm"
+NeoBundle "fuenor/qfixhowm"
 NeoBundle "fuenor/qfixgrep"
 " }}} Plugins
 
