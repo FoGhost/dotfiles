@@ -50,6 +50,9 @@ if has("mouse")
  set mouse=a  " Mouse in all modes
 endif
 
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,sjis,cp932,euc-jp,cp20932
+set encoding=utf-8
+
 autocmd BufRead,BufNewFile *.erb set filetype=eruby.html
 autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb -default=model() " Fabrication support
 

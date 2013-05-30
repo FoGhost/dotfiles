@@ -96,8 +96,3 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
-" Colorize
-hi Pmenu guibg=#f5f5dc guifg=#000000
-hi PmenuSel guibg=#0000ff guifg=#ffffff
-hi PmenuSbar guibg=#aaaaaa
-hi PmenuThumb guifg=#0000ff
