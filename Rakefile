@@ -21,7 +21,6 @@ namespace :vim do
     system 'cp _gvimrc ~/.gvimrc'
     system 'cp -R vim/config/ ~/.vim/config/'
     system 'cp -R vim/ftplugin/ ~/.vim/ftplugin/'
-    system 'vim +NeoBundleInstall +qa'
   end
 
   desc "Push local vim config file to github."
