@@ -47,6 +47,7 @@ NeoBundle "Shougo/neosnippet"
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/vimshell"
 NeoBundle "Shougo/vimproc"
+NeoBundle 'Shougo/neocomplcache-rsense'
 
 " Run script quickly : Quickrun
 NeoBundle "thinca/vim-quickrun"
@@ -91,6 +92,9 @@ for bundle_name in s:bundle_names
 endfor
 
 filetype plugin indent  on " Automatically detect file types.
+
+" Set $RSENSE_HOME path.
+let g:neocomplcache#sources#rsense#home_directory = '/usr/local/opt/rsense-0.3'
 
 " Load Basic setting
 if filereadable(expand('~/.vim/config/basic.vimrc'))
