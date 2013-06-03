@@ -16,7 +16,7 @@ namespace :vim do
 
   desc "Pull vim config file from github and deploy"
   task :pull  do
-    system "git pull"
+    system "git pull origin master"
     system 'cp _vimrc ~/.vimrc'
     system 'cp _gvimrc ~/.gvimrc'
     system 'cp -R vim/config/ ~/.vim/config/'
@@ -31,7 +31,7 @@ namespace :vim do
     system 'cp -R ~/.vim/ftplugin/ vim/ftplugin/'
     system "git add ."
     system "git commit -m 'Rake: update vim config file.'"
-    system "git push"
+    system "git push origin master"
   end
 end
 
