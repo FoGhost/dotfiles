@@ -1,0 +1,8 @@
+[user]
+name = foghost
+email = xx@xx.com
+[color]
+ui = auto
+[core]
+	excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
