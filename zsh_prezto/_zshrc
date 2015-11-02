@@ -1,0 +1,83 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
+
+export PATH=$HOME/bin:$PATH
+GOPATH=$HOME/.go
+#export RSENSE_HOME=/usr/local/opt/rsense-0.3
+#export EXTRA_CFLAGS=-lresolv
+
+#export APACHE_PATH=$(brew --prefix)/Cellar/httpd/2.2.23
+
+if [ -f $HOME/.zsh_aliases ];then
+  . $HOME/.zsh_aliases
+fi
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+source ~/.nvm/nvm.sh
+
+# dir/sub_dir = cd dir/sub_dir
+setopt auto_cd
+
+# multiple output pipeline
+setopt multios
+setopt auto_name_dirs
+
+# cd = pushd
+setopt auto_pushd
+
+# blank pushd goes to home
+setopt pushd_to_home
+
+# pushd 不添加相同的目录
+setopt pushd_ignore_dups
+
+# zsh之间共享命令历
+setopt share_history
+
+# Command历史记录里同时记录命令的执行时间
+setopt extended_history
+
+# Command历史记录里不重复添加命令
+setopt hist_ignore_dups
+
+# 立刻添加到Command历史记录
+setopt inc_append_history
+
+
+# 删除东西(rm)之前默认等待10秒钟
+setopt rm_star_wait
+
+# prompt内可进行变量展开，command置换，算数演算
+setopt prompt_subst
+
+# If we have a glob this will expand it
+setopt glob_complete
+setopt pushd_minus
+
+setopt extended_glob
+
+setopt ignore_eof
+
+# Spell Check
+setopt correct
+
+# No flow control ctrl-s ctrl-q
+setopt no_flow_control
+

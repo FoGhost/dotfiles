@@ -13,6 +13,7 @@ NeoBundle "tpope/vim-rails"
 NeoBundle "tpope/vim-haml"
 NeoBundle "kchmck/vim-coffee-script.git"
 NeoBundle 'briancollins/vim-jst'
+NeoBundle 'fatih/vim-go'
 
 " Snippets
 " NeoBundle "http://github.com/gmarik/snipmate.vim.git"
@@ -37,6 +38,7 @@ NeoBundle "http://github.com/altercation/vim-colors-solarized.git"
 NeoBundle "repeat.vim"
 NeoBundle "surround.vim"
 NeoBundle "Align"
+NeoBundle "http://github.com/rking/ag.vim.git"
 
 " NeoBundle "http://github.com/scrooloose/nerdtree.git"
 NeoBundle "git://git.wincent.com/command-t.git"
