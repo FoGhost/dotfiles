@@ -4,7 +4,7 @@ set nocompatible
    set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
- call neobundle#rc(expand('~/.vim/bundle/'))
+ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " }}} Plugins
 " Programming
@@ -32,20 +32,21 @@ NeoBundle "fugitive.vim"
 " NeoBundle "ragtag.vim"
 
 " " ColorSchema
-NeoBundle "http://github.com/altercation/vim-colors-solarized.git"
+NeoBundle "altercation/vim-colors-solarized.git"
 
 " " Utility
 NeoBundle "repeat.vim"
 NeoBundle "surround.vim"
 NeoBundle "Align"
-NeoBundle "http://github.com/rking/ag.vim.git"
+NeoBundle "rking/ag.vim.git"
 
 " NeoBundle "http://github.com/scrooloose/nerdtree.git"
-NeoBundle "git://git.wincent.com/command-t.git"
+NeoBundle "wincent/command-t"
 NeoBundle "Shougo/vimfiler"
 
 NeoBundle "Shougo/neocomplcache"
 NeoBundle "Shougo/neosnippet"
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/vimshell"
 NeoBundle "Shougo/vimproc"
@@ -59,7 +60,7 @@ NeoBundle "fuenor/qfixgrep"
 " }}} Plugins
 
 NeoBundleCheck " Check plugins installation
-
+call neobundle#end()
 " Load plugin vimrc files
 " let s:bundles = neobundle#config#get_neobundles() 
 " <- NG can not control the loading order;

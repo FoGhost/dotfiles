@@ -1,0 +1,24 @@
+
+
+alias vim='mvim -v'
+
+alias mosh-dev="mosh -p 8081 dev --server='LANG=ja_JP.UTF-8 mosh-server'"
+alias mount-dev="[ ! -d '/Volumes/xx_dev' ] && mkdir /Volumes/xx_dev && sshfs dev:/ /Volumes/xx_dev && cd /Volumes/xx_dev && echo 'Mount dev successfully'"
+alias umount-dev="cd ~/ && umount /Volumes/xx_dev"
+alias cd-dev="cd /Volumes/xx_dev/"
+
+# Git
+alias git='hub'
+alias gc='git checkout'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gca='git commit --amend'
+alias gbc='gbcc $1'
+alias g='git status -sb'
+alias ls='ls -G'
+alias cdd='/Users/foghost/Development/mercari-mini3/workspace' #// cd mercari
+
+function gbcc () {
+  git browse -- tree/master/"$1"
+}

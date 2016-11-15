@@ -33,6 +33,18 @@ namespace :vim do
     system "git commit -m 'Rake: update vim config file.'"
     system "git push origin master"
   end
+
+  desc "Collect local vim config file"
+  task :collect do
+    system 'cp ~/.vimrc _vimrc'
+    system 'cp ~/.gvimrc _gvimrc'
+    system 'cp ~/.zsh_aliases zsh_prezto/_zsh_aliases'
+    system 'cp ~/.zshrc zsh_prezto/_zshrc'
+    system 'cp ~/.zpreztorc zsh_prezto/_zpreztorc'
+    system 'cp -R ~/.vim/config/ vim/config/'
+    system 'cp -R ~/.vim/ftplugin/ vim/ftplugin/'
+  end
+
 end
 
 namespace :bash do
